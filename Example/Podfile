@@ -1,0 +1,11 @@
+use_frameworks!
+
+target 'OnboardFlow_Example' do
+  pod 'OnboardFlow', :path => '../'
+
+  target 'OnboardFlow_Tests' do
+    inherit! :search_paths
+
+    
+  end
+end
