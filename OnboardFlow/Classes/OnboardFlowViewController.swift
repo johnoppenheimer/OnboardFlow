@@ -158,7 +158,7 @@ extension OnboardFlowViewController: UIPageViewControllerDataSource {
 }
 
 extension OnboardFlowViewController: UIPageViewControllerDelegate {
-    private func pageViewController(_ pageViewController: UIPageViewController, willTransitionTo pendingViewControllers: [UIViewController]) {
+    public func pageViewController(_ pageViewController: UIPageViewController, willTransitionTo pendingViewControllers: [UIViewController]) {
         guard let index = self.controllers.firstIndex(of: pendingViewControllers.first!) else {
             return
         }
@@ -166,7 +166,7 @@ extension OnboardFlowViewController: UIPageViewControllerDelegate {
         pendingIndex = index
     }
     
-    private func pageViewController(_ pageViewController: UIPageViewController, didFinishAnimating finished: Bool, previousViewControllers: [UIViewController], transitionCompleted completed: Bool) {
+    public func pageViewController(_ pageViewController: UIPageViewController, didFinishAnimating finished: Bool, previousViewControllers: [UIViewController], transitionCompleted completed: Bool) {
         self.pageControl.currentPage = pendingIndex
     }
 }

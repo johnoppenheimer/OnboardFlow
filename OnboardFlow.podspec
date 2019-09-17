@@ -9,7 +9,7 @@
 Pod::Spec.new do |s|
   s.name             = 'OnboardFlow'
   s.version          = '0.1.0'
-  s.summary          = 'A short description of OnboardFlow.'
+  s.summary          = 'OnboardFlow is a Swift library giving you a simple logic to create onboarding flows'
 
 # This description is used to generate tags and improve search results.
 #   * Think: What does it do? Why did you write it? What is the focus?
@@ -18,7 +18,7 @@ Pod::Spec.new do |s|
 #   * Finally, don't worry about the indent, CocoaPods strips it!
 
   s.description      = <<-DESC
-TODO: Add long description of the pod here.
+OnboardFlow is a Swift library helping you create simple onboarding flows. It gives a simple logic and some customization on how you want your users to navigate your onboarding
                        DESC
 
   s.homepage         = 'https://github.com/johnoppenheimer/OnboardFlow'
@@ -29,6 +29,7 @@ TODO: Add long description of the pod here.
   # s.social_media_url = 'https://twitter.com/<TWITTER_USERNAME>'
 
   s.ios.deployment_target = '10.0'
+  s.swift_versions = '5.0'
 
   s.source_files = 'OnboardFlow/Classes/**/*'
   
