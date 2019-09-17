@@ -7,12 +7,27 @@
 //
 
 import UIKit
+import OnboardFlow
 
-class ViewController: UIViewController {
+class ViewController: UINavigationController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+        
+        view.backgroundColor = .white
+        
+        let onboardingController = OnboardFlowViewController()
+        onboardingController.controllers = [FirstViewController(), SecondViewController()]
+        onboardingController.enableSwipe = false
+        onboardingController.showPageControl = true
+        
+        self.viewControllers = [onboardingController]
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        
+        self.isNavigationBarHidden = true
     }
 
     override func didReceiveMemoryWarning() {
