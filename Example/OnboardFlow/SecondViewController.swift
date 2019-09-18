@@ -10,7 +10,7 @@ import UIKit
 import OnboardFlow
 
 class SecondViewController: UIViewController, OnboardFlowCompletableController {
-    var delegate: OnboardFlowCompletableViewControllerDelegate?
+    var completableDelegate: OnboardFlowCompletableViewControllerDelegate?
     
     let label: UILabel = {
         let label = UILabel()

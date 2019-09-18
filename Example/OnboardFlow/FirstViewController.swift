@@ -10,7 +10,7 @@ import UIKit
 import OnboardFlow
 
 class FirstViewController: UIViewController, OnboardFlowCompletableController {
-    var delegate: OnboardFlowCompletableViewControllerDelegate?
+    var completableDelegate: OnboardFlowCompletableViewControllerDelegate?
     
     let label: UILabel = {
         let label = UILabel()
@@ -51,6 +51,6 @@ class FirstViewController: UIViewController, OnboardFlowCompletableController {
     }
     
     @objc func next(_ sender: Any) {
-        delegate?.done(controller: self)
+        completableDelegate?.done(controller: self)
     }
 }
