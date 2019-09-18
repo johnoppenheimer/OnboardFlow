@@ -9,7 +9,7 @@
 import UIKit
 
 public protocol OnboardFlowCompletableController {
-    var delegate: OnboardFlowCompletableViewControllerDelegate? { get set }
+    var completableDelegate: OnboardFlowCompletableViewControllerDelegate? { get set }
 }
 
 public protocol OnboardFlowCompletableViewControllerDelegate {
@@ -35,7 +35,7 @@ open class OnboardFlowViewController: UIPageViewController {
                 guard var completableController = controller as? OnboardFlowCompletableViewController else {
                     fatalError("Wrong type of controller")
                 }
-                completableController.delegate = self
+                completableController.completableDelegate = self
             }
             
             self.pageControl.numberOfPages = self.controllers.count
