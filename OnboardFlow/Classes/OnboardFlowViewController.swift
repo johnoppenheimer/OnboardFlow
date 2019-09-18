@@ -22,7 +22,7 @@ public protocol OnboardFlowViewControllerDelegate {
     func finishOnboarding()
 }
 
-public final class OnboardFlowViewController: UIPageViewController {
+public class OnboardFlowViewController: UIPageViewController {
     
     // MARK: - Public properties
     public var onboardingDelegate: OnboardFlowViewControllerDelegate?
