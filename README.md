@@ -65,7 +65,7 @@ import UIKit
 import OnboardFlow
 
 class ViewController: UIViewController, OnboardFlowCompletableController {
-    var delegate: OnboardFlowCompletableControllerDelegate?
+    var completableDelegate: OnboardFlowCompletableControllerDelegate?
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -75,7 +75,7 @@ class ViewController: UIViewController, OnboardFlowCompletableController {
 
 If you didn't allow swipe, to let the `OnboardFlowViewController` know that you are done with that controller, call the `delegate` `done` method so that the `OnboardFlowViewController` continue:
 ```swift
-self.delegate?.done(controller: self)
+self.completableDelegate?.done(controller: self)
 ```
 
 ### Finishing the onboarding flow
