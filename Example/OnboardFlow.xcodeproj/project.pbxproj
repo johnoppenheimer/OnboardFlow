@@ -47,7 +47,7 @@
 		7CB4F10E7B8ECA6A23897EBE /* Pods-OnboardFlow_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OnboardFlow_Tests.debug.xcconfig"; path = "Target Support Files/Pods-OnboardFlow_Tests/Pods-OnboardFlow_Tests.debug.xcconfig"; sourceTree = "<group>"; };
 		9C7A14F523314CA500B276A6 /* FirstViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstViewController.swift; sourceTree = "<group>"; };
 		9C7A14F723314E6E00B276A6 /* SecondViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondViewController.swift; sourceTree = "<group>"; };
-		A4C092A9C5515AC8A0DC068E /* OnboardFlow.podspec */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = OnboardFlow.podspec; path = ../OnboardFlow.podspec; sourceTree = "<group>"; };
+		A4C092A9C5515AC8A0DC068E /* OnboardFlow.podspec */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = OnboardFlow.podspec; path = ../OnboardFlow.podspec; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		BD1F6EFF1076AAC12ED9D1ED /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
