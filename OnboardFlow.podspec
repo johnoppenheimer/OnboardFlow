@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'OnboardFlow'
-  s.version          = '0.1.4'
+  s.version          = '0.1.5'
   s.summary          = 'OnboardFlow is a Swift library giving you a simple logic to create onboarding flows'
 
 # This description is used to generate tags and improve search results.
