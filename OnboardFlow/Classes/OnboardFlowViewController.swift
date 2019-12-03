@@ -71,7 +71,7 @@ open class OnboardFlowViewController: UIPageViewController {
     }
     
     // MARK: - UI
-    var pageControl: UIPageControl = {
+    public var pageControl: UIPageControl = {
         let control = UIPageControl()
         control.pageIndicatorTintColor = UIColor(red: 0.77, green: 0.77, blue: 0.77, alpha: 1.0)
         control.currentPageIndicatorTintColor = UIColor(red: 0.37, green: 0.37, blue: 0.37, alpha: 1.0)
