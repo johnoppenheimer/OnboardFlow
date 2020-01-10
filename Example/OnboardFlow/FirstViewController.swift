@@ -10,7 +10,7 @@ import UIKit
 import OnboardFlow
 
 class FirstViewController: UIViewController, OnboardFlowCompletableController {
-    var completableDelegate: OnboardFlowCompletableViewControllerDelegate?
+    weak var completableDelegate: OnboardFlowCompletableViewControllerDelegate?
     
     let label: UILabel = {
         let label = UILabel()

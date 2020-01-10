@@ -8,31 +8,31 @@
 
 import UIKit
 
-public protocol OnboardFlowCompletableController {
+public protocol OnboardFlowCompletableController: class {
     var completableDelegate: OnboardFlowCompletableViewControllerDelegate? { get set }
 }
 
-public protocol OnboardFlowCompletableViewControllerDelegate {
+public protocol OnboardFlowCompletableViewControllerDelegate: class {
     func done(controller: OnboardFlowCompletableViewController)
 }
 
 public typealias OnboardFlowCompletableViewController = UIViewController & OnboardFlowCompletableController
 
-public protocol OnboardFlowViewControllerDelegate {
+public protocol OnboardFlowViewControllerDelegate: class {
     func finishOnboarding()
 }
 
 open class OnboardFlowViewController: UIPageViewController {
     
     // MARK: - Public properties
-    public var onboardingDelegate: OnboardFlowViewControllerDelegate?
+    public weak var onboardingDelegate: OnboardFlowViewControllerDelegate?
     
     /// Array of controllers you want in your Onboarding
     public var controllers = [UIViewController]() {
         didSet {
             // Setup delegate for each controllers
             for controller in self.controllers {
-                guard var completableController = controller as? OnboardFlowCompletableViewController else {
+                guard let completableController = controller as? OnboardFlowCompletableViewController else {
                     fatalError("Wrong type of controller")
                 }
                 completableController.completableDelegate = self
