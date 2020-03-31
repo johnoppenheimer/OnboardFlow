@@ -19,7 +19,7 @@ public protocol OnboardFlowCompletableViewControllerDelegate: class {
 public typealias OnboardFlowCompletableViewController = UIViewController & OnboardFlowCompletableController
 
 public protocol OnboardFlowViewControllerDelegate: class {
-    func finishOnboarding()
+    func finishOnboarding(_ controller: OnboardFlowViewController)
 }
 
 open class OnboardFlowViewController: UIPageViewController {
@@ -122,7 +122,7 @@ extension OnboardFlowViewController: OnboardFlowCompletableViewControllerDelegat
                 self.pageControl.currentPage = nextIndex
             })
         } else {
-            self.onboardingDelegate?.finishOnboarding()
+            self.onboardingDelegate?.finishOnboarding(self)
         }
     }
 }
